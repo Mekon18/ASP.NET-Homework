@@ -1,0 +1,17 @@
+﻿@model Asp.net_MVC_13.Models.Calc
+
+@using (Html.BeginForm())
+{
+    <p>@ViewBag.Message</p>
+
+    <p>
+        @Model.Arg1
+        @Html.DisplayTextFor(m => m.Operation)
+        @Html.DisplayTextFor(m => m.Arg2)
+        =
+    </p>
+    <p>@Html.TextBoxFor(m => m.Result)</p>
+    @Html.HiddenFor(m => m.Arg1)
+    @Html.HiddenFor(m => m.Arg2)
+    @Html.HiddenFor(m => m.Operation)
+}
